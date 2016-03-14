@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <base href="/">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/app.css">
-    <script src="/jspm_packages/system.js"></script>
-    <script src="/config.js"></script>
-    <script>
-      System.import('app.js');
-    </script>
+    <link rel="stylesheet" href="/stylesheets/app.css">
   </head>
   <body>
+
+    <div ui-view name='application'></div>
+    <div ui-view name='books'></div>
+
     {% block title %}
     {% endblock %}
     {% block content %}
     {% endblock %}
+
+
+    <!-- build:js -->
+    <script src="/jspm_packages/system.js"></script>
+    <script src="/config.js"></script>
+    <script>
+      System.import('javascripts/applications.js').catch(console.error.bind(console));
+    </script>
+    <!-- endbuild -->
+
     <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!-- <script type="text/javascript" src="/js/main.js"></script> -->

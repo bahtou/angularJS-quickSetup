@@ -22,7 +22,11 @@
     "directories": {
       "baseURL": "client"
     },
-    "dependencies": {},
+    "dependencies": {
+      "angular": "npm:angular@1.5",
+      "angular-new-router": "npm:angular-new-router@^0.5.3",
+      "angular-ui-router": "npm:angular-ui-router@^0.2.18"
+    },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
       "babel-runtime": "npm:babel-runtime@^5.8.24",
