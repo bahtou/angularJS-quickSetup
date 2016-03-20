@@ -1,3 +1,5 @@
+'use strict';
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -27,6 +29,13 @@ app.use(express.static(path.join(__dirname, '../client')));
 
 app.use('/', routes);
 app.use('/users', users);
+
+// This route enables HTML5Mode by forwarding missing files to the index.html
+app.all('/*', function(req, res) {
+  console.log('Server re-writing for angular routing');
+  res.render('index');
+});
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
