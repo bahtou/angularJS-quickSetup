@@ -201,5 +201,6 @@
   "npm:angular-ui-router@0.2.18": {
     "angular": "npm:angular@^1.0.8",
     "process": "github:jspm/nodelibs-process@^0.1.0"
-  }
+  },
+  "npm:angular@1.5.2": {}
 }

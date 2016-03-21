@@ -14,7 +14,7 @@ System.config({
   },
 
   map: {
-    "angular": "npm:angular@1.5.0",
+    "angular": "npm:angular@1.5.2",
     "angular-new-router": "npm:angular-new-router@0.5.3",
     "angular-ui-router": "npm:angular-ui-router@0.2.18",
     "babel": "npm:babel-core@5.8.35",

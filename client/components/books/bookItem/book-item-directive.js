@@ -14,7 +14,7 @@ function component() {
     controller: BookItemController,
     controllerAs: '$ctrl',
     bindToController: {
-      book: '='
+      book: '<'
     }
   };
 }
