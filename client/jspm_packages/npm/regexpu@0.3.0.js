@@ -1,1 +1,0 @@
-module.exports = require("npm:regexpu@0.3.0/regexpu.js");

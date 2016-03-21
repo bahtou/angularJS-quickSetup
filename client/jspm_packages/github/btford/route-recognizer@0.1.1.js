@@ -1,1 +1,0 @@
-module.exports = require("github:btford/route-recognizer@0.1.1/dist/route-recognizer.cjs.js");
