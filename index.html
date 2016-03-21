@@ -4,10 +4,51 @@
 <head>
   <title>Quicky</title>
   <script src="./jspm_packages/npm/angular@1.5.2/angular.js"></script>
+  <script>
+    var myApp = angular.module('myApp', []);
+
+    myApp.controller('myController', ['$scope', function ($scope) {
+      var books_mock = [
+        {
+          name: 'The Book of Trees',
+          price: 19,
+          pubdate: new Date('2014', '03', '08'),
+        },
+        {
+          name: 'Program or be Programmed',
+          price: 8,
+          pubdate: new Date('2013', '08', '01'),
+        },
+          {
+          name: 'Program or be Programmed',
+          price: 2,
+          pubdate: new Date('2013', '08', '01'),
+        },
+          {
+          name: 'Program or be Programmed',
+          price: 7,
+          pubdate: new Date('2013', '08', '01'),
+        }
+      ];
+
+      $scope.books = books_mock;
+    }]);
+  </script>
 </head>
 
 <body>
   <h1>What's happening?</h1>
+  <div ng-controller="myController">
+
+    <ul>
+      <li ng-repeat="book in books">
+        <span>{{ book.name }}</span>
+        <span>{{ book.price | currency }}</span>
+        <span>{{ book.pubdate | date }}</span>
+      </li>
+   </ul>
+
+  </div>
 </body>
 
 </html>
