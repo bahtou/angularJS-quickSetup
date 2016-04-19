@@ -9,7 +9,7 @@ IndexController.$inject = [];
 function IndexController() {
   var ctrl = this;
 
-  ctrl.title = 'My Fucking App';
-  ctrl.welcome = 'Welcome to my brain fuck!';
+  ctrl.title = 'My Awesome App';
+  ctrl.welcome = 'Welcome to my test app!';
 }
 
